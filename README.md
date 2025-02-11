@@ -1,4 +1,6 @@
-# Requirements
+# Athletic Gear - Challenge
+
+## Requirements
 
 You can use any programming language.  
 

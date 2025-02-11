@@ -1,97 +1,93 @@
-# Requisitos
+# Requirements
 
-**Utilizar qualquer linguagem de programação.**
+You can use any programming language.  
 
-A ideia é validar a lógica e principalmente a forma como resolveu o problema.
+The goal is to validate the **logic** and, more importantly, how you solve the problem.  
 
-Vamos querer ouvir como aprendeu, como descobriu e o porquê escolheu fazer assim no seu código.
+We want to hear about **how you learned**, **how you figured things out**, and **why you chose to implement your solution this way**.  
 
-Não é necessário conhecer todos recursos para resolver o desafio, a proposta é "correr atrás" para aprender e então resolver.
+You **don't need to know everything** beforehand to solve the challenge. The idea is to **research, learn, and then implement your solution**.  
 
-Sugerimos procurar no Google, Stack Overflow, YouTube, grupos técnicos, amigos, colegas de sala, professor, o que preferir -- _lembra de contar pra gente depois hein!_
+We suggest using Google, Stack Overflow, YouTube, technical groups, friends, classmates, teachers—whatever works best for you.  
+Just remember to tell us about your learning process later!  
 
-Não tem prazo específico para terminar, quando acabar nos envie.
+There is **no strict deadline** to complete the challenge. When you're done, send it to us.  
 
-Lembre-se que esse prazo também será levado em consideração, não fique com pressa para terminar rápido se estiver errado ou incompleto, só que também não gaste _um ano_ para terminar 😉
-
----
-
-## Problema a ser resolvido
-
-Considerando um array de senhas em string, que pode ser uma constante no código, imprimir na tela somente as que forem senhas fortes.
-
-Para uma senha ser forte, ela deve ter:
-
-- no mínimo 7 caracteres
-- pelo menos uma letra maiúscula
-- pelo menos uma letra minúscula
-- \+ _E se for tranquilo para você, verifica também se tem um caracter especial (dentro dos que você preferir!) 🙂_
+> ⚠️ However, the time you take will also be considered.  
+> Don't rush and submit something incomplete or incorrect, but also **don't take a whole year to finish**. 😉
 
 ---
 
-### Extra / Bônus
+## Problem to Solve
 
-Você ganhará pontos extras se utilizar um repositório Git e enviar sua solução no [GitHub](https://github.com/).
+Given an **array of password strings**, which can be a constant in your code, **print only the strong passwords**.  
 
-_(melhor ainda se fizer um fork desse 🤩)_.
+A **strong password** must meet the following criteria:
 
-Se você não conhecer o [Git](https://www.google.com/search?q=git), não tem problema nenhum. Pode aprender e nos contar como aprendeu!
-
-Não precisa virar um especialista, apenas o básico! Só que iremos querer saber como você aprendeu
-
-Queremos avaliar sua capacidade de aprender e de buscar ajuda.
-
-Tem muito material pronto e gratuito sobre Git e GitHub, use a internet a seu favor.
-
-De qualquer maneira, isso será útil para toda sua vida enquanto profissional de TI! 👍
+- ✅ At least **7 characters long**  
+- ✅ Contains **at least one uppercase letter**  
+- ✅ Contains **at least one lowercase letter**  
+- ✅ **(Bonus)** If possible, check if it contains at least **one special character** (you can define the set of special characters yourself).  
 
 ---
 
-#### Exemplo
+## Extra / Bonus
 
-Considerando um array com as strings:
+You will **earn extra points** if you **use a Git repository** and submit your solution on **GitHub**.  
 
-- #forTe1
-- senhafraca
-- Qu@s1
-- Voce@Consegue!2023
+*(Even better if you fork this one! 🤩)*  
 
-Será impresso na tela apenas duas linhas:
+If you're unfamiliar with **Git**, don't worry!  
+You can **learn it and tell us how you did it**!  
+
+You **don't need to become an expert**—just learn the basics.  
+But we **will ask how you learned it**.  
+
+We want to evaluate your ability to **learn and seek help**.  
+
+There are **plenty of free resources** about Git and GitHub. Use the internet to your advantage!  
+
+> **Regardless, learning Git will be useful for your entire career in IT!** 👍  
 
 ---
-\#forTe1
 
-Voce@Consegue!2023
+## Example
+
+Given the following array of strings:
+#forTe1 senhafraca Qu@s1 Voce@Consegue!2023
+
+Only **two** lines should be printed:
+#forTe1 Voce@Consegue!2023
+
+Since these are the only passwords that meet the strong password requirements.
 
 ---
 
-Já que são as únicas que atendem os requisitos para uma senha forte.
+### ✅ Password Analysis  
 
-- **#forTe1**
-  - ✅ >= 7 caracteres (7)
-  - ✅ Tem letra maiúscula (T)
-  - ✅ Tem letra minúscula (fore)
-  - ✅ Tem número (1)
-  - ✅ _E tem caracter especial, caso você consiga validar (#)_
+#### `#forTe1`
+- ✅ **>= 7 characters** (7)  
+- ✅ **Has an uppercase letter** (T)  
+- ✅ **Has a lowercase letter** (fore)  
+- ✅ **Has a number** (1)  
+- ✅ **Has a special character** (`#`, if you validate special characters)  
 
-- senhafraca
+#### `senhafraca`
+- ✅ **>= 7 characters** (10)  
+- ❌ **No uppercase letter**  
+- ✅ **Has a lowercase letter** (senhafraca)  
+- ❌ **No number**  
 
-  - ✅ >= 7 caracteres (10)
-  - ❌ Tem letra maiúscula
-  - ✅ Tem letra minúscula (senhafraca)
-  - ❌ Tem número
+#### `Qu@s1`
+- ❌ **< 7 characters** (5)  
+- ✅ **Has an uppercase letter** (Q)  
+- ✅ **Has a lowercase letter** (us)  
+- ✅ **Has a number** (1)  
+- ✅ **Has a special character** (`@`, if you validate special characters)  
 
-- Qu@s1
-
-  - ❌ >= 7 caracteres (5)
-  - ✅ Tem letra maiúscula (Q)
-  - ✅ Tem letra minúscula (us)
-  - ✅ Tem número (1)
-  - ✅ _E tem caracter especial, caso você consiga validar (@)_
-
-- **Voce@Consegue!2023**
-  - ✅ >= 7 caracteres (18)
-  - ✅ Tem letra maiúscula (VC)
-  - ✅ Tem letra minúscula (oceonsegue)
-  - ✅ Tem número (2023)
-  - ✅ _E tem caracter especial, caso você consiga validar (@!)_
+#### `Voce@Consegue!2023`
+- ✅ **>= 7 characters** (18)  
+- ✅ **Has uppercase letters** (V, C)  
+- ✅ **Has lowercase letters** (oceonsegue)  
+- ✅ **Has numbers** (2023)  
+- ✅ **Has special characters** (`@!`, if you validate special characters)  
